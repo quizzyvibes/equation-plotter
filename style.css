@@ -1,97 +1,25 @@
-body {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align to top for longer content */
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
-    padding: 20px;
-    box-sizing: border-box;
-}
+/* ... (previous CSS styles) ... */
 
-.container {
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 700px;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.input-group, .controls, .range-group {
+.input-group {
     margin-bottom: 15px;
+    position: relative; /* For potential absolute positioning of elements inside */
 }
 
-.input-group label, .range-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-    font-size: 0.9em;
-}
-
-input[type="text"], input[type="number"] {
-    width: calc(100% - 22px); /* Account for padding and border */
+.equation-preview {
+    margin-top: 8px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px dashed #ddd; /* Light border to show the area */
     border-radius: 4px;
-    font-size: 1em;
+    min-height: 2.5em; /* Ensure space for the equation */
+    font-size: 1.2em; /* Make rendered math a bit larger */
+    text-align: center; /* Center the rendered math expression */
+    background-color: #f9f9f9;
+    overflow-x: auto; /* Allow scrolling for very long equations */
 }
 
-.controls {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 10px; /* Space between range groups and button */
-    align-items: flex-end; /* Align button with bottom of inputs */
+/* KaTeX specific styling (usually not much needed beyond KaTeX's own CSS) */
+.katex-display { /* If using displayMode: true in KaTeX */
+    margin: 0.5em 0;
 }
 
-.range-group {
-    display: flex;
-    flex-direction: column; /* Stack label and input */
-    flex-grow: 1; /* Allow groups to take available space */
-}
-
-.range-group input[type="number"] {
-    width: 80px; /* Fixed width for range inputs */
-    padding: 8px;
-}
-
-
-button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    margin-top: 10px; /* Add some space if it wraps */
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.plot-area {
-    margin-top: 20px;
-    text-align: center; /* Center the canvas */
-}
-
-#plotCanvas {
-    border: 1px solid #ccc;
-    background-color: #fff;
-}
-
-.error {
-    color: red;
-    margin-top: 10px;
-    font-size: 0.9em;
-    min-height: 1.2em; /* Reserve space even if no error */
-}
+/* ... (rest of your CSS) ... */
