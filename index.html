@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Equation Plotter</title>
     
-    <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0KOVcNGuKMvrNLMnLCHqzHBJXjdhlKaHxxaYIhXDFTSEGDIOjaOdM" crossorigin="anonymous">
+    <!-- KaTeX CSS - CORRECTED -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" 
+          integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" 
+          crossorigin="anonymous">
     
     <link rel="stylesheet" href="style.css">
     
     <!-- math.js library (CDN) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
-    <!-- KaTeX JS (defer ensures it loads after HTML is parsed) -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmNO कंडेन्यूक्लियर" crossorigin="anonymous"></script>
-    <!-- KaTeX auto-render extension (optional, but handy for static math) -->
-    <!-- <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURPlLHumrZ3c4PzP/HgtCgTRPcOOmbk1PtCpbC21T_L/A5tZ2j2F9B" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script> -->
+    <!-- Adding crossorigin for good practice, though not strictly required if no integrity hash is used for it -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js" crossorigin="anonymous"></script>
+    
+    <!-- KaTeX JS (defer ensures it loads after HTML is parsed) - CORRECTED -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" 
+            integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" 
+            crossorigin="anonymous"></script>
+    
+    <!-- Optional: KaTeX auto-render extension (if you use it, get its correct integrity hash) -->
+    <!-- 
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            integrity="sha384-YOUR_CORRECT_HASH_FOR_AUTO_RENDER_JS" 
+            crossorigin="anonymous" 
+            onload="renderMathInElement(document.body);"></script> 
+    -->
 
 </head>
 <body>
